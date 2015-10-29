@@ -1,0 +1,80 @@
+# Site default meta keywords
+#keywords: site, wide, default, keywords
+
+menu:
+  Home: /
+  Archives: /archives
+  About Me: /about
+  Projects: /projects
+
+highlight:
+  style: solarized_dark
+  enable: true
+  line_number: false
+
+widgets:
+- search
+- tagcloud
+#- about
+#- tag
+#- category
+#- subscribe_mailchimp
+#- noteworthy
+
+marked:
+  gfm: true
+  tables: true
+
+# For use with tagcloud or tag widgets
+# - only tags >= to tag_minium are shown
+tag_minium: 3
+
+twitter_id:
+facebook_id:
+linkedin_id:
+github_id: 
+google_plus_id: 
+
+# add "share post to facebook/twitter" buttons to your post
+# you need to get a pubid from addthis to use it
+
+# addthis:
+#   enable: true
+#   pubid: ...
+#   twitter: true
+#   facebook: true
+
+# this is the about section, it apprears top right
+
+about:
+  title: About Coffeetoast
+  content:
+  - image: http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Subculture-Coffee-icon.png
+    image_alt: me
+    description: I ♥ JavaScript + iOS.(web and mobile engineer.)
+  
+
+noteworthy_title: Best blog posts
+noteworthy:
+  - url: /my/best/post1/
+    title: Switching from PHP to node.js
+  - url: /my/best/post2/
+    title: node.js performance tuning
+
+# Mailchimp:
+# 
+# to set up mailing over Mailchimp create a campaign based on RSS
+#
+# to get those ids, go to Mailchimp and go to
+# lists -> embedded -> naked
+# see copy/paste onto site:
+
+mailchimp:
+  # inside <form action="…">
+  post_action: ""
+  # inside <input type="text" name="…" tabindex="-1" value="">
+  field_name: 
+
+google_analytics: 
+
+disqus_shortname: coffeetoast
