@@ -19,7 +19,7 @@ Swift 2.0이 정식으로 나오긴했지만 그들도 확립하는 시기가 �
 일단 `~/.bash_profile` 에 아래와 같이 alias 설정을 추가한다. 
 <!-- more --> 
 
->alias xcodeclean="rm -frd ~/Library/Developer/Xcode/DerivedData/* && rm -frd ~/Library/>Caches/com.apple.dt.Xcode/*"
+>alias xcodeclean="rm -frd ~/Library/Developer/Xcode/DerivedData/* && rm -frd ~/Library/Caches/com.apple.dt.Xcode/*"
 
 
 다음 `xcodeclean`을 실행한 후 Xcode를 다시 실행해보자. 
