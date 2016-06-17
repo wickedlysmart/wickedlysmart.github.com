@@ -87,5 +87,5 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:wickedlysmart/wickedlysmart.github.com.git
+  repo: https://github.com/wickedlysmart/wickedlysmart.github.com.git
   branch: master
