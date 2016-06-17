@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>AppleScript를 활용한 예약 문자 보내기. | I&#39;m Coffeetoast.</title>
+  <meta name="author" content="Coffeetoast">
+  
+  <meta name="description" content="몇년전, 아이폰 국내출시때 KT에서 선착순 예약문자를 받은 적이 있었다.(지금도 신제품 출시때 하고 있다.)그때 아이폰으로는 예약문자를 보낼수 없을까? 하는 생각에서 시작해 지금까지여러 활용 범위가 높아 정보는 공유되어야 한다는 정신하에 이렇게 작성을 해본다.  
+정확한 제목으로는“AppleScript를 활용해 나만의 IFTTT 문자서비스를 만들어보기” 가 되겠다.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="generator" content="Hexo 2.6.0"/>
+
+  <meta property="og:title" content="AppleScript를 활용한 예약 문자 보내기."/>
+  <meta property="og:site_name" content="I&#39;m Coffeetoast."/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="shortcut icon">
+
+  
+    <link rel="stylesheet" href="/css/highlightjs/solarized_dark.css">
+  
+
+  <link rel="alternate" href="/atom.xml" title="I&#39;m Coffeetoast." type="application/atom+xml">
+
+  <link href="/css/site.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.caption.min.js"></script>
+  <link href="/css/captionjs.min.css" rel="stylesheet"/>
+  <script type="text/javascript" src="/js/ewal.js"></script>
+
+  
+
+
+</head>
+
+<body>
+  
+
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><span class="text-primary">I'm Coffeetoast.</span></a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right">
+      <ul class="nav navbar-nav">
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives">Archives</a></li>
+        
+          <li><a href="/about">About Me</a></li>
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+      
+      
+      
+      
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"><article class="post">
+  
+    <div class="post-date">
+      <time datetime="2016-02-24T05:39:10.000Z">Feb 24 2016</time>
+    </div>
+    
+  
+    <h1 class="title">AppleScript를 활용한 예약 문자 보내기.</h1>
+  
+
+  
+  <div class="post-content">
+    
+      <img src="/2016/02/24/Auto-SMS/forecast.jpg">
+<p>몇년전, 아이폰 국내출시때 KT에서 선착순 예약문자를 받은 적이 있었다.(지금도 신제품 출시때 하고 있다.)<br>그때 아이폰으로는 예약문자를 보낼수 없을까? 하는 생각에서 시작해 지금까지<br>여러 활용 범위가 높아 정보는 공유되어야 한다는 정신하에 이렇게 작성을 해본다.  </p>
+<p>정확한 제목으로는<br>“AppleScript를 활용해 나만의 <a href="https://ifttt.com" target="_blank" rel="external">IFTTT</a> 문자서비스를 만들어보기” 가 되겠다.</p>
+<a id="more"></a>
+<h4 id="1-Intro"><a href="#1-Intro" class="headerlink" title="1. Intro"></a>1. Intro</h4><blockquote>
+<p><strong>준비 및 필수사항</strong></p>
+<ul>
+<li>집에서 놀고 있는 맥미니 ( 서버용이 아닌 맥에서는 시연만 가능 )</li>
+<li>iMessage 연속성 기능 해당 맥에 활성화 (설정방법은 <a href="https://support.apple.com/ko-kr/HT204681" target="_blank" rel="external">이곳</a>을 참고)</li>
+<li>스크립트를 걸기 위해 Calendar App 활용.  </li>
+<li>OSX 버젼이 몇이상이라던지 하는 제약사항까진 자세하게 쓰지 않았음.</li>
+<li>필자의 스크립트보다 더 좋은 방법이 있을수 있음을 인정함.</li>
+</ul>
+</blockquote>
+<h4 id="2-문자를-보내는-Script-작성"><a href="#2-문자를-보내는-Script-작성" class="headerlink" title="2. 문자를 보내는 Script 작성"></a>2. 문자를 보내는 Script 작성</h4><p>AppleScript를 이용해 Script를 간단하게 작성해 보았다.<br>일단 다운로드를 받은 후 “전화번호”와 “문자내용”을 원하는 내용으로 수정한다. </p>
+<blockquote>
+<p><a href="/2016/02/24/Auto-SMS/AutoSMS.scpt">download</a></p>
+</blockquote>
+<p>여기서 살펴보아야 할 것은 </p>
+<pre> --set targetService to id of 1st service whose service type = iMessage
+set targetService to id of service "SMS"</pre>
+
+<p>service type을 문자(녹색)말고 iMessage(파란색)로 먼저 보내고 싶다면 주석을 삭제해 준다. </p>
+<p>마지막으로 중요한 것은 <strong>저장할때 파일포맷을 응용프로그램</strong>으로 변경 후 저장해둔다. </p>
+<h4 id="3-예약-스크립트-걸기"><a href="#3-예약-스크립트-걸기" class="headerlink" title="3. 예약 스크립트 걸기."></a>3. 예약 스크립트 걸기.</h4><p>BSD/UNIX 계열의 운영체제에서 script를 예약하는 방법은 여러가지가 있다.<br>하지만 우리는 맥용 캘린더 앱을 이용해서 손쉽게 script를 원하는 시간에 실행시켜보기로 한다. </p>
+<p>캘린더 앱에서 새로운 일정을 추가 한 뒤 <a href="/2016/02/24/Auto-SMS/calendar.png">알림-파일열기</a>컨트롤쪽에서<br>위에서 다운 받았던 스크립트를 설정해둔다. </p>
+<p>추가로 반복기능을 이용해 활용 범위가 상당히 넓어 지는 데 다음 섹션에서 알아보도록 하자. </p>
+<h4 id="4-Infinite-활용"><a href="#4-Infinite-활용" class="headerlink" title="4. Infinite 활용."></a>4. Infinite 활용.</h4><p>기본적인 예약 문자보내기 기능을 알아봤으니 활용 범위에 대해서 이야기 해보자.<br>일단 필자는 단순히 예약 문자기능으로는 매일 까먹는 쓰레기 분리수거일 알림으로 활용하고 있다. </p>
+<p>여기서 2% 부족한 아쉬움이 남는데, 모임이나 지정된 지인들에게 단체 예약 문자를 보내 볼수 있지 않을까?<br>하는 생각이 들었다. (하지만 아쉽게도 애플에서 target ID 부분에 그룹지정으로 한번에 문자를 보낼 수 있는 기능을<br>제공하고 있지 않다.) 그치만 조금 번거롭지만 Array를 돌려 한번 지정해 놓고 활용할 수 있다. </p>
+<p>모두 같은 내용을 보내면 스팸문자라고 생각되기 때문에 각자의 이름을 문자 앞에 넣어서 조금 스팸이 아닌 것 처럼 보내는 스크립트를 작성해보았다. </p>
+<blockquote>
+<p><a href="/2016/02/24/Auto-SMS/GroupAutoSMS.scpt">단체문자보내기: download</a></p>
+</blockquote>
+<p>여기서 조금 더 나아가서 다른 Script의 결과를 활용해서 문자메세지를 보낼 수도 있다.<br>이를 이용하면 IFTTT에서 비가 오면 문자를 보내준다던지, 특정 작업이 끝나면 문자를 보내준다던지 하는 등 다양하게 활용을 할수 있게 된다. </p>
+<p>필자는 여자친구님께서 아침마다 날씨예보를 받아볼수 있으면 좋겠다는 말에 단순히 야후날씨를 긁어서 받아오는 스크립트와 예약문자를 활용해서 매일 아침 점수를 따고 있다. -_- </p>
+<p>날씨정보 애플스크립트에서 외부스크립트 경로부분을 지정 후 실행해야 한다. </p>
+<blockquote>
+<p><a href="/2016/02/24/Auto-SMS/weather.sh">날씨정보 외부 쉘스크립트: download</a><br><a href="/2016/02/24/Auto-SMS/ForeCast.scpt">날씨정보 애플 스크립트: download</a></p>
+</blockquote>
+<p>또한 라즈베리파이를 이용해 정말 IFTTT의 SMS 기능처럼 활용할수도 있다. </p>
+<p>필자는 라즈베리파이, 온도 센서와 릴레이 스위치를 이용해 방안의 온도가 특정온도가 넘으면 에어콘을 틀어고 문자를 보내주는 기능을 구현해 활용해보기도 하였다.  </p>
+<h4 id="5-마치며"><a href="#5-마치며" class="headerlink" title="5. 마치며"></a>5. 마치며</h4><p>사실 맥용서버와 연속성 기능을 활성화 해야 한다는 제약이 있지만 가볍게 IFTTT의 SMS 기능을<br>본인이 구현 할수 있다는 것에 의의를 두고 싶다. 실제로 상당히 활용도가 높아서 몇년째 잘 사용하고 있다.<br>비가 오면 우산을 챙기라는 문자를 보내는 스크립트 작성을 유저분들에게 숙제로 두고 싶다.<br>유저분들만의 무궁무진한 활용 스토리를 들어 볼수 있었으면 좋겠다. </p>
+
+    
+  </div>
+  
+    
+
+    
+  
+  <div class="tags">
+    <a href="/tags/Script/">Script</a>, <a href="/tags/Mac/">Mac</a>
+  </div>
+
+  
+  <div class="addthis_toolbox addthis_default_style 
+addthis_32x32_style" data-addthis-url="http://me.soon.it:4000/2016/02/24/Auto-SMS/" data-addthis-title="AppleScript를 활용한 예약 문자 보내기.">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+  
+<div class="row comments">
+  <h2>Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+
+
+</article></div>
+      <div class="col-md-offset-1 col-md-3"><div class="sidebar-nav">
+
+  <div class="widget">
+  	<form action="//google.com/search" method="get" accept-charset="utf-8">
+  <input type="hidden" name="q" value="site:me.soon.it:4000">
+  <div class="input-group">
+    <input class="form-control" id="searchbox" name="q" placeholder="Search in posts">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <span class="glyphicon glyphicon-search"></span> 
+      </button>
+    </span>
+  </div>
+</form>
+
+  </div>
+
+  <div class="widget">
+  	
+<h3 class="title">Tags</h3>
+<div class="well" style="line-height:14pt">
+
+  
+
+  
+
+  
+
+  
+  <a style="font-size: 124%" href="/tags/Swift/">Swift</a>
+  
+
+  
+  <a style="font-size: 118%" href="/tags/Xcode/">Xcode</a>
+  
+
+  
+
+  
+
+  
+
+  
+  <a style="font-size: 136%" href="/tags/bananapi/">bananapi</a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <a style="font-size: 130%" href="/tags/iOS/">iOS</a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <a style="font-size: 142%" href="/tags/raspberrypi/">raspberrypi</a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+  </div>
+
+</div>
+</div>
+    </div>
+  </div>
+  <div id="push"></div>
+  <div class="navbar navbar-footer">
+  <div class="container">
+    <p class="navbar-center navbar-text">
+      
+      &copy; 2016 Coffeetoast
+      
+    </p>
+  </div>
+</div>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+var disqus_shortname = 'coffeetoast';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+</body>
+</html>
