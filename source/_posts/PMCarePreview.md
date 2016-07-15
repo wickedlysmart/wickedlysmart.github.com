@@ -12,7 +12,7 @@ tags:
 조만간 당신을 찾아갑니다.
 </div>
 <div style="position:relative;float:left;top:5px;">
-<img src="/2016/07/13/PMCarePreview/preview.jpg" width="420px" height="239px">
+<img src="/2016/07/13/PMCarePreview/preview.jpg" width="400px" height="228px">
 </div>
 
 </div>
