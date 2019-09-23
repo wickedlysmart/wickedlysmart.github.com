@@ -17,7 +17,7 @@ javascript는 class가 없어서 생성자 함수로 그것을 구현하고 있�
   <meta property="og:site_name" content="I&#39;m Coffeetoast."/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   <link href="/favicon.png" rel="shortcut icon">
@@ -90,16 +90,17 @@ javascript는 class가 없어서 생성자 함수로 그것을 구현하고 있�
   
   <div class="post-content">
     
-      <p><div class="clearfix entry-content"></div></p>
-<p></p><h1>Five ways to create objects…</h1><p></p>
+      <div class="clearfix entry-content">
+<h1>Five ways to create objects…</h1>
 <p>javascript는 class가 없어서 생성자 함수로 그것을 구현하고 있다.<br>따라서 일반 function이 여러가지 의미를 하는 만큼 무엇을 뜻하는지 잘 구분해야 한다.</p>
 
 <a id="more"></a>
-<p>원본글 :&nbsp;<a href="http://javascriptweblog.wordpress.com/2010/03/16/five-ways-to-create-objects/#more-21" target="_blank" rel="external">http://javascriptweblog.wordpress.com/2010/03/16/five-ways-to-create-objects/#more-21</a></p>
 
-<p></p><h3>1. Simple Object Literal</h3><p></p>
-<p></p><p>{}를 통해 빈 객체를 생성한 다음, 프로퍼티를 추가해 나가는 방법</p><p></p>
-<pre class="brush: jscript; title: ; notranslate" title="">
+<p>원본글 :&nbsp;<a href="http://javascriptweblog.wordpress.com/2010/03/16/five-ways-to-create-objects/#more-21" target="_blank" rel="noopener">http://javascriptweblog.wordpress.com/2010/03/16/five-ways-to-create-objects/#more-21</a></p>
+
+<h3>1. Simple Object Literal</h3>
+<p>{}를 통해 빈 객체를 생성한 다음, 프로퍼티를 추가해 나가는 방법</p>
+<pre class="brush: jscript; title: ; notranslate" title>
 myApp.notepad  = {};
 myApp.notepad.writeable = true;
 myApp.notepad.font  = 'helvetica';
@@ -109,7 +110,7 @@ myApp.notepad.setFont = function(theFont) {
 </pre>
 <h3>2. Nested Object Literal</h3>
 <p>{} 내부에 프로퍼티를 미리 정의한 다음 객체를 생성하는 방법</p>
-<pre class="brush: jscript; title: ; notranslate" title="">
+<pre class="brush: jscript; title: ; notranslate" title>
 myApp.notepad  = {
     writeable: true,
     font: 'helvetica',
@@ -120,7 +121,7 @@ myApp.notepad  = {
 </pre>
 <h3>3. Constructor using Object Literal</h3>
 <p>{}를 통해 객체를 만드는 함수를 만들고, 이를 호출하는 방식으로 객체를 생성하는 방법</p>
-<pre class="brush: jscript; title: ; notranslate" title="">
+<pre class="brush: jscript; title: ; notranslate" title>
 myApp.Notepad = function(defaultFont) {
     var  that = {};
     that.writeable = true;
@@ -131,11 +132,10 @@ myApp.Notepad = function(defaultFont) {
     return that;
 }
 
-myApp.notepad1 =  myApp.Notepad('helvetica');
-</pre>
+<p>myApp.notepad1 =  myApp.Notepad(‘helvetica’);<br></p></pre><p></p>
 <h3>4. Simple Constructor for new</h3>
 <p>생성자 함수를 만든 다음, new를 통해 객체를 생성하는 방법</p>
-<pre class="brush: jscript; title: ; notranslate" title="">
+<pre class="brush: jscript; title: ; notranslate" title>
 myApp.Notepad = function(defaultFont) {
     this.writeable = true;
     this.font = defaultFont;
@@ -144,22 +144,14 @@ myApp.Notepad = function(defaultFont) {
     }
 }
 
-myApp.notepad1  = new myApp.Notepad('helvetica');
-</pre>
+<p>myApp.notepad1  = new myApp.Notepad(‘helvetica’);<br></p></pre><p></p>
 <h3>5. Prototype with Constructor for new</h3>
 <p>Prototype을 가진 생성자 함수와 new를 이용해서 객체를 생성하는 방법.</p>
-<pre class="brush: jscript; title: ; notranslate" title="">
+<pre class="brush: jscript; title: ; notranslate" title>
 
-myApp.Notepad = function(defaultFont) {
-    this.font = defaultFont;
-}
-myApp.Notepad.prototype.writeable  = true;
-myApp.Notepad.prototype.setFont  = function(theFont) {
-    this.font = theFont;
-}
-
-myApp.notepad1  = new myApp.Notepad('helvetica');
-</pre>
+<p>myApp.Notepad = function(defaultFont) {<br>    this.font = defaultFont;<br>}<br>myApp.Notepad.prototype.writeable  = true;<br>myApp.Notepad.prototype.setFont  = function(theFont) {<br>    this.font = theFont;<br>}</p>
+<p>myApp.notepad1  = new myApp.Notepad(‘helvetica’);<br></p></pre><p></p>
+</div>
     
   </div>
   

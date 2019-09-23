@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="I&#39;m Coffeetoast."/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   <link href="/favicon.png" rel="shortcut icon">
@@ -94,7 +94,8 @@
   
   <div class="post-content">
     
-      <p>요세미티 Beta1 설치때 다운로드 안되시는 분들은 일본 vpn으로 변경 후 해결한 엔드유저분들이 많다. 그런데 문제는 이후 다운로드 받으면서 문제가 된 LaunchPad에 있는 요세미티 아이콘이 삭제가 안되는 문제가 있다.</p><br><p>열심히 구글링과 각종 커뮤니티를 섭렵한 끝에 아주 간단히 Fix 할수 있었다. 그 해결책은 다음과 같다.</p><br>
+      <p>요세미티 Beta1 설치때 다운로드 안되시는 분들은 일본 vpn으로 변경 후 해결한 엔드유저분들이 많다. 그런데 문제는 이후 다운로드 받으면서 문제가 된 LaunchPad에 있는 요세미티 아이콘이 삭제가 안되는 문제가 있다.</p>
+<p>열심히 구글링과 각종 커뮤니티를 섭렵한 끝에 아주 간단히 Fix 할수 있었다. 그 해결책은 다음과 같다.</p>
     
   </div>
   
@@ -133,7 +134,12 @@ addthis_32x32_style" data-addthis-url="https://wickedlysmart.github.io/2014/08/0
   
   <div class="post-content">
     
-      <div class="entry-content"><br><div>This is what you need to do:</div><br><div><pre>sudo nano /etc/modprobe.d/8192cu.conf</pre></div><br><div>Add the following:</div><br><div><pre># Disable power management<br><br>options 8192cu rtw_power_mgnt=0</pre></div><br>
+      <div class="entry-content">
+<div>This is what you need to do:</div>
+<div><pre>sudo nano /etc/modprobe.d/8192cu.conf</pre></div>
+<div>Add the following:</div>
+<div><pre># Disable power management<br>
+options 8192cu rtw_power_mgnt=0</pre></div>
     
   </div>
   
@@ -224,7 +230,7 @@ addthis_32x32_style" data-addthis-url="https://wickedlysmart.github.io/2014/07/1
   
   <div class="post-content">
     
-      <p><code>/etc/init.d/rc.local</code> :<br>makes it to start as a level <code>“service”</code> whereas,<br><br><br><code>/etc/rc.local</code><br>would simply launch that <code>script</code> at boot time.</p>
+      <p><code>/etc/init.d/rc.local</code> :<br>makes it to start as a level <code>"service"</code> whereas,<br><br><br><code>/etc/rc.local</code><br>would simply launch that <code>script</code> at boot time.</p>
 
     
   </div>
@@ -299,8 +305,10 @@ addthis_32x32_style" data-addthis-url="https://wickedlysmart.github.io/2014/07/1
   
   <div class="post-content">
     
-      <p></p><p><img src="/2014/07/10/Get-a-BananaPi,RaspberryPi/pi.jpeg" width="300" height="200"></p><p></p>
-<h1 id="좌-라즈베리파이-우-바나나파이"><a href="#좌-라즈베리파이-우-바나나파이" class="headerlink" title="좌: 라즈베리파이 , 우: 바나나파이 !!"></a>좌: <code>라즈베리파이</code> , 우: <code>바나나파이</code> !!</h1><h3 id="앞으로-재미난-프로젝트-할-거리가-많아졌다"><a href="#앞으로-재미난-프로젝트-할-거리가-많아졌다" class="headerlink" title="- 앞으로 재미난 프로젝트 할 거리가 많아졌다."></a>- 앞으로 재미난 프로젝트 할 거리가 많아졌다.</h3>
+      <p><img src="/2014/07/10/Get-a-BananaPi,RaspberryPi/pi.jpeg" width="300" height="200"></p>
+# 좌: <code>라즈베리파이</code> , 우: <code>바나나파이</code> !!
+
+<h3 id="앞으로-재미난-프로젝트-할-거리가-많아졌다"><a href="#앞으로-재미난-프로젝트-할-거리가-많아졌다" class="headerlink" title="- 앞으로 재미난 프로젝트 할 거리가 많아졌다."></a>- 앞으로 재미난 프로젝트 할 거리가 많아졌다.</h3>
     
   </div>
   
@@ -444,7 +452,12 @@ addthis_32x32_style" data-addthis-url="https://wickedlysmart.github.io/2014/07/1
   
   <div class="post-content">
     
-      <div class="row-fluid build-text"><br>Start by getting access to the GPIO by making a device link<br><pre>sudo sh -c  “echo 252 &gt; /sys/class/gpio/export”<br>ls -l /sys/class/gpio</pre><br><br>Then turn the display back on with<br><pre>sudo sh -c  “echo ‘1’ &gt; /sys/class/gpio/gpio252/value”</pre><br>or back off<br><pre>sudo sh -c  “echo ‘0’ &gt; /sys/class/gpio/gpio252/value”<br></pre><br><br>
+      <div class="row-fluid build-text">
+Start by getting access to the GPIO by making a device link
+<pre>sudo sh -c  "echo 252 &gt; /sys/class/gpio/export"
+ls -l /sys/class/gpio</pre>
+
+<p>Then turn the display back on with<br><pre>sudo sh -c  "echo '1' &gt; /sys/class/gpio/gpio252/value"</pre><br>or back off<br><pre>sudo sh -c  "echo '0' &gt; /sys/class/gpio/gpio252/value"<br></pre></p>
     
   </div>
   
@@ -483,8 +496,8 @@ addthis_32x32_style" data-addthis-url="https://wickedlysmart.github.io/2014/07/1
   
   <div class="post-content">
     
-      <p><div class="clearfix entry-content"></p>
-<p><h1>Five ways to create objects…</h1></p>
+      <div class="clearfix entry-content">
+<h1>Five ways to create objects…</h1>
 <p>javascript는 class가 없어서 생성자 함수로 그것을 구현하고 있다.<br>따라서 일반 function이 여러가지 의미를 하는 만큼 무엇을 뜻하는지 잘 구분해야 한다.</p>
     
   </div>

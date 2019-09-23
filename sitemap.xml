@@ -9,84 +9,7 @@
   </url>
   
   <url>
-    <loc>https://wickedlysmart.github.io/2015/11/02/NSNotification/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/12/10/From-NSURLConnection-to-NSURLSession/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2015/10/29/Error-Handling-in-Swift-2-0-Using-Do-Catch-Try-Throws-guard-Keyword/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/07/09/Five-ways-to-create-javascript-objects/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2016/02/24/Auto-SMS/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/07/07/Install-Node-on-The-Raspberry-Pi-in-5minutes/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/07/10/Get-a-BananaPi,RaspberryPi/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2015/11/08/NSDate/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2016/06/17/Overwrite-Local-Files-From-remote-repo/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wickedlysmart.github.io/2014/07/20/PREVENTING-RASPBERRY-PI-WIFI-FROM-GOING-INTO-SLEEP-MODE/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/07/05/First-Post/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/07/10/Turn-the-display-back-onoff-on-Raspberry-Pi/</loc>
     
     <lastmod>2016-06-17T10:34:35.000Z</lastmod>
     
@@ -100,7 +23,84 @@
   </url>
   
   <url>
-    <loc>https://wickedlysmart.github.io/2015/11/10/Static-vs-Dynamic-Or-Library-vs-Framework-Definition/</loc>
+    <loc>https://wickedlysmart.github.io/2015/10/29/Error-Handling-in-Swift-2-0-Using-Do-Catch-Try-Throws-guard-Keyword/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/05/First-Post/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/09/Five-ways-to-create-javascript-objects/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/12/10/From-NSURLConnection-to-NSURLSession/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/10/Get-a-BananaPi,RaspberryPi/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/07/Install-Node-on-The-Raspberry-Pi-in-5minutes/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2015/11/08/NSDate/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2015/11/02/NSNotification/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2016/06/17/Overwrite-Local-Files-From-remote-repo/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/09/10/After-watching-14-Apple-media-event-keynote/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2016/02/24/Auto-SMS/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/10/Turn-the-display-back-onoff-on-Raspberry-Pi/</loc>
     
     <lastmod>2016-06-17T10:34:35.000Z</lastmod>
     
@@ -114,7 +114,7 @@
   </url>
   
   <url>
-    <loc>https://wickedlysmart.github.io/2014/08/04/Yosemite-Beta-LaunchPad-Error-fixed/</loc>
+    <loc>https://wickedlysmart.github.io/2015/11/10/Static-vs-Dynamic-Or-Library-vs-Framework-Definition/</loc>
     
     <lastmod>2016-06-17T10:34:35.000Z</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://wickedlysmart.github.io/2014/07/06/bashrc-vs-bash_profile/</loc>
+    <loc>https://wickedlysmart.github.io/2014/08/04/Yosemite-Beta-LaunchPad-Error-fixed/</loc>
     
     <lastmod>2016-06-17T10:34:35.000Z</lastmod>
     
@@ -136,6 +136,20 @@
   
   <url>
     <loc>https://wickedlysmart.github.io/2014/07/11/angularcopy-vs-angularextend/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/06/bashrc-vs-bash_profile/</loc>
+    
+    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wickedlysmart.github.io/2014/07/11/difference-between-etcrclocal-and-etcinitdrclocal/</loc>
     
     <lastmod>2016-06-17T10:34:35.000Z</lastmod>
     
@@ -150,20 +164,6 @@
   
   <url>
     <loc>https://wickedlysmart.github.io/2014/07/06/test/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/07/11/difference-between-etcrclocal-and-etcinitdrclocal/</loc>
-    
-    <lastmod>2016-06-17T10:34:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wickedlysmart.github.io/2014/09/10/After-watching-14-Apple-media-event-keynote/</loc>
     
     <lastmod>2016-06-17T10:34:35.000Z</lastmod>
     

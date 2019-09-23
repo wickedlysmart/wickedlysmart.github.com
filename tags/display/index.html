@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="I&#39;m Coffeetoast."/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   <link href="/favicon.png" rel="shortcut icon">
@@ -94,7 +94,12 @@
   
   <div class="post-content">
     
-      <div class="row-fluid build-text"><br>Start by getting access to the GPIO by making a device link<br><pre>sudo sh -c  “echo 252 &gt; /sys/class/gpio/export”<br>ls -l /sys/class/gpio</pre><br><br>Then turn the display back on with<br><pre>sudo sh -c  “echo ‘1’ &gt; /sys/class/gpio/gpio252/value”</pre><br>or back off<br><pre>sudo sh -c  “echo ‘0’ &gt; /sys/class/gpio/gpio252/value”<br></pre><br><br>
+      <div class="row-fluid build-text">
+Start by getting access to the GPIO by making a device link
+<pre>sudo sh -c  "echo 252 &gt; /sys/class/gpio/export"
+ls -l /sys/class/gpio</pre>
+
+<p>Then turn the display back on with<br><pre>sudo sh -c  "echo '1' &gt; /sys/class/gpio/gpio252/value"</pre><br>or back off<br><pre>sudo sh -c  "echo '0' &gt; /sys/class/gpio/gpio252/value"<br></pre></p>
     
   </div>
   

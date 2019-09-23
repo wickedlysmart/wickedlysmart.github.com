@@ -6,7 +6,11 @@
   <title>Turn the display back on/off on Raspberry Pi | I&#39;m Coffeetoast.</title>
   <meta name="author" content="Coffeetoast">
   
-  <meta name="description" content="Start by getting access to the GPIO by making a device linksudo sh -c  “echo 252 &amp;gt; /sys/class/gpio/export”ls -l /sys/class/gpioThen turn the display back on withsudo sh -c  “echo ‘1’ &amp;gt; /sys/class/gpio/gpio252/value”or back offsudo sh -c  “echo ‘0’ &amp;gt; /sys/class/gpio/gpio252/value”">
+  <meta name="description" content="Start by getting access to the GPIO by making a device link
+sudo sh -c  &#34;echo 252 &amp;gt; /sys/class/gpio/export&#34;
+ls -l /sys/class/gpio
+
+Then turn the display back on withsudo sh -c  &#34;echo &#39;1&#39; &amp;gt; /sys/class/gpio/gpio252/value&#34;or back offsudo sh -c  &#34;echo &#39;0&#39; &amp;gt; /sys/class/gpio/gpio252/value&#34;">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,7 +20,7 @@
   <meta property="og:site_name" content="I&#39;m Coffeetoast."/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   <link href="/favicon.png" rel="shortcut icon">
@@ -89,7 +93,15 @@
   
   <div class="post-content">
     
-      <div class="row-fluid build-text"><br>Start by getting access to the GPIO by making a device link<br><pre>sudo sh -c  “echo 252 &gt; /sys/class/gpio/export”<br>ls -l /sys/class/gpio</pre><br><br>Then turn the display back on with<br><pre>sudo sh -c  “echo ‘1’ &gt; /sys/class/gpio/gpio252/value”</pre><br>or back off<br><pre>sudo sh -c  “echo ‘0’ &gt; /sys/class/gpio/gpio252/value”<br></pre><br><br><a id="more"></a><br>Once you verify that you see GPIO #252, then you can set it to an<br>output, this will turn off the display since it will output 0 by default<br><pre>bash<br>sudo sh -c  “echo ‘out’ &gt; /sys/class/gpio/gpio252/direction”</pre><br>    </div>
+      <div class="row-fluid build-text">
+Start by getting access to the GPIO by making a device link
+<pre>sudo sh -c  "echo 252 &gt; /sys/class/gpio/export"
+ls -l /sys/class/gpio</pre>
+
+<p>Then turn the display back on with<br><pre>sudo sh -c  "echo '1' &gt; /sys/class/gpio/gpio252/value"</pre><br>or back off<br><pre>sudo sh -c  "echo '0' &gt; /sys/class/gpio/gpio252/value"<br></pre></p>
+<a id="more"></a>
+<p>Once you verify that you see GPIO #252, then you can set it to an<br>output, this will turn off the display since it will output 0 by default<br><pre>bash<br>sudo sh -c  "echo 'out' &gt; /sys/class/gpio/gpio252/direction"</pre><br>    </p></div><p></p>
+
     
   </div>
   

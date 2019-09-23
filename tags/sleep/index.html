@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="I&#39;m Coffeetoast."/>
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content=""/>
   
 
   <link href="/favicon.png" rel="shortcut icon">
@@ -94,7 +94,12 @@
   
   <div class="post-content">
     
-      <div class="entry-content"><br><div>This is what you need to do:</div><br><div><pre>sudo nano /etc/modprobe.d/8192cu.conf</pre></div><br><div>Add the following:</div><br><div><pre># Disable power management<br><br>options 8192cu rtw_power_mgnt=0</pre></div><br>
+      <div class="entry-content">
+<div>This is what you need to do:</div>
+<div><pre>sudo nano /etc/modprobe.d/8192cu.conf</pre></div>
+<div>Add the following:</div>
+<div><pre># Disable power management<br>
+options 8192cu rtw_power_mgnt=0</pre></div>
     
   </div>
   
